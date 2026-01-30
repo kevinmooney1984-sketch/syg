@@ -1,0 +1,24 @@
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+export const metadata = {
+  title: "SYG | Stand Your Ground",
+  description: "For those who train. Not for everyone.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className="bg-black text-white antialiased">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
